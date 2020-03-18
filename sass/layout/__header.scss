@@ -1,0 +1,79 @@
+.header {
+    max-width: 1920px;
+    height: 90vh;
+    background-image: linear-gradient(90deg, #073673, #0A6AA6, #0468BF);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    //border-radius: 1rem 1rem 0 0;
+    color: $white;
+    & .header-content {
+        width: 65%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & .krzysztof-img {
+            height: 35rem;
+            border-radius: 1rem;
+            animation: moveUpFirst 2s;
+        }
+        & .header-content__description {
+            padding: 1rem 0;
+            font-size: 2rem;
+            & span {
+                display: inline-block;
+
+            }
+            & span:first-child {
+                animation: moveRight 2s ease-out;
+                animation-fill-mode: backwards;
+                animation-delay: 2s;
+                font-size: 3rem;
+                color: #F2E205;
+                text-transform: uppercase;
+            }
+            & span:nth-child(2) {
+                animation: moveLeft 2s ease-out;
+                animation-delay: 2s;
+                animation-fill-mode: backwards;
+                font-weight: 100;
+            }
+            & span:nth-child(3) {
+                animation: moveRight 2s ease-out;
+                animation-delay: 2s;
+                animation-fill-mode: backwards;
+                font-weight: 100;
+            }
+            & span:nth-child(4) {
+                animation: moveLeft 2s ease-out;
+                animation-delay: 2s;
+                animation-fill-mode: backwards;
+                color: #F2E205;
+            }
+        }
+    }   
+}
+
+.navigation {
+    line-height: 3.5;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: right;
+    background: linear-gradient(90deg, #073673, #0A6AA6, #0468BF);
+    & .navigation__link {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin: 0rem 4rem;
+        padding-bottom: .8rem;
+        color: $color-white;
+        cursor: pointer;
+        //border-bottom: .2rem solid $color-white;
+        transition: .6s;
+        /*&:hover {
+            border-bottom: .2rem solid $navy-blue;
+            padding-bottom: .3rem;
+        }
+        */
+    }
+}

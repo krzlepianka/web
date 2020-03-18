@@ -1,0 +1,12 @@
+.about-me {
+    background-color: $color-white;
+    color: $navy-blue;
+    &-technology {
+        &-item {
+            height: 8rem;
+            padding: 2rem;
+        }
+    }
+}
+
+

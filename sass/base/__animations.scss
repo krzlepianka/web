@@ -1,0 +1,88 @@
+@keyframes moveRight {
+    0% {
+        transform: translateX(-5rem);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(3rem);
+        opacity: .3;
+    }
+    50% {
+        transform: translateX(-3rem);
+        opacity: .5;
+    }
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(5rem);
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(-3rem);
+        opacity: .3;
+    }
+    50% {
+        transform: translateX(3rem);
+        opacity: .5;
+    }
+    100% {
+        transform: translateX(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUpFirst {
+    0% {
+        transform: translateY(6rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-1rem);
+        opacity: .5;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUpSecond {
+    0% {
+        transform: translateY(6rem);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-1rem);
+        opacity: .5;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+@keyframes showButton {
+    from {
+        opacity: 0;
+        transform: rotate(130deg)
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0)
+    }
+}
+
+@keyframes moveHtmIcon {
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(100%, 100%);
+    }
+    
+}
