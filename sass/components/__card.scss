@@ -4,6 +4,9 @@
     position: relative;
     height: 50rem;
     cursor: pointer;
+    @include respond(phone) {
+        height: auto;
+    }
     &__side {
         position: absolute;
         top: 0;
@@ -15,7 +18,11 @@
         border-radius: 3px;
         box-shadow: 0rem 1.5rem 4rem rgba($color-black, .15);
         overflow: hidden;
-    
+        @include respond(phone) {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+        }
     &--front {
         &-1 {
             color: $light-red;
@@ -29,6 +36,9 @@
     }
     &--back {
         transform: rotateY(180deg);
+        @include respond(phone) {
+            transform: none;
+        }
 
         &-1 {
             background-image: linear-gradient(to right, #F00d, #01d);

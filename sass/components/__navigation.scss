@@ -1,0 +1,22 @@
+.navigation {
+    line-height: 3.5;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: right;
+    background: linear-gradient(90deg, #073673, #0A6AA6, #0468BF);
+    & .navigation__link {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin: 0rem 4rem;
+        padding-bottom: .8rem;
+        color: $color-white;
+        cursor: pointer;
+        transition: .6s;
+        /*&:hover {
+            border-bottom: .2rem solid $navy-blue;
+            padding-bottom: .3rem;
+        }
+        */
+    }
+}
