@@ -4,19 +4,20 @@
         animation-delay: 4s;   
         animation-fill-mode: both; 
         background: #3726A6;
+        margin: 2.2rem 2rem 0 0;
     }
     &__about-me--yellow {
         animation: moveUpSecond 2s ease-out;
         animation-delay: 4s;   
         animation-fill-mode: both; 
         background-color: #F2E205;
+        margin: 2.2rem 2rem 0 0;
     } 
     &-footer {
         background-color: #3726A6;
     }
     &:link,
     &:visited {
-        margin: 2.2rem 2rem 0 0;
         text-decoration: none;
         padding: 1rem 3rem;
         display: inline-block;

@@ -1,22 +1,79 @@
 .navigation {
+    display: none;
     line-height: 3.5;
     letter-spacing: .3rem;
     text-transform: uppercase;
     width: 100%;
     text-align: right;
     background: linear-gradient(90deg, #073673, #0A6AA6, #0468BF);
-    & .navigation__link {
-        display: inline-block;
-        font-size: 1.8rem;
-        margin: 0rem 4rem;
-        padding-bottom: .8rem;
-        color: $color-white;
-        cursor: pointer;
-        transition: .6s;
-        /*&:hover {
-            border-bottom: .2rem solid $navy-blue;
-            padding-bottom: .3rem;
-        }
-        */
+    &__link {
+        @include navigation(inline-block)
     }
+    &__mobile {
+        display: none;
+        line-height: 3.5;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(90deg, #073673, #0A6AA6, #0468BF);
+    }
+    &__container-btn {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        text-align: left;
+        margin-left: 90%;
+        cursor: pointer;
+    }
+    &__btn {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 30px;
+        height: 1px;
+        background: $white;
+        border-radius: .5rem;
+        transition: all .5s ease-in-out;
+    }
+    &__btn::before {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background: $white;
+        transform: translateY(-8px);
+        border-radius: .5rem;
+    }
+    &__btn::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background: $white;
+        transform: translateY(8px);
+        border-radius: .5rem;
+    }
+    &__links-mobile {
+        display: none;
+    }
+    &__link-mobile {
+        @include navigation(block)
+    }
+}
+    
+.navigation__container-btn.open .navigation__btn {
+    //transform: translateX(-5rem);
+    background: transparent;
+    box-shadow: none;
+}
+
+.navigation__container-btn.open .navigation__btn:before {
+    transform: rotate(45deg);
+}
+
+.navigation__container-btn.open .navigation__btn:after {
+    transform: rotate(-45deg);
 }

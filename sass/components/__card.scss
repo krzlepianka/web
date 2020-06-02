@@ -4,9 +4,6 @@
     position: relative;
     height: 50rem;
     cursor: pointer;
-    @include respond(phone) {
-        height: auto;
-    }
     &__side {
         position: absolute;
         top: 0;
@@ -18,11 +15,6 @@
         border-radius: 3px;
         box-shadow: 0rem 1.5rem 4rem rgba($color-black, .15);
         overflow: hidden;
-        @include respond(phone) {
-            height: auto;
-            position: relative;
-            box-shadow: none;
-        }
     &--front {
         &-1 {
             color: $light-red;
@@ -36,10 +28,6 @@
     }
     &--back {
         transform: rotateY(180deg);
-        @include respond(phone) {
-            transform: none;
-        }
-
         &-1 {
             background-image: linear-gradient(to right, #F00d, #01d);
             }
@@ -74,14 +62,23 @@
 
         }
     }
-
+    
     &:hover &__side--front {
-        transform: rotateY(180deg);
+        @include respond(big-deskt) {
+            transform: rotateY(180deg);   
+        }         
     }
+    &:hover .layer {
+        @include respond(tab-port) {
+            visibility: visible;
+            background: rgba(0,0,0,0.5);
+        }
+    } 
     &:hover &__side--back {
-        transform: rotateY(360deg);
+        @include respond(big-deskt) {
+        transform: rotateY(360deg); 
+        }  
     }
-
     &__heading {
         &-span {
             &--1 {
@@ -90,4 +87,23 @@
         }
     }
     
+}
+
+.layer {
+    @include respond(tab-port) {
+    transition: all .8s ease-in-out;
+    visibility: hidden;
+    height: inherit;
+    }
+    @include respond(big-deskt) {
+        display: none;
+    }
+    &__links {
+        height: inherit;
+        display: block;
+        padding: 13rem 0;
+        & a {
+            margin: 2rem;
+        }
+    }
 }
