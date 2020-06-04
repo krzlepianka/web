@@ -2,13 +2,13 @@
     max-width: $grid-width; 
     margin: 0 auto;
     margin-bottom: $gutter-vertical;
+    @include respond(tab-land) {
+        max-width: 95rem;
+    }
     @include respond(tab-port) {
         margin-bottom: $gutter-vertical-small;
-    }
-    @include respond(tab-port) {
         max-width: 40rem;
     }
-
     @include clearfix;
     [class^='col-'] {
         float: left;

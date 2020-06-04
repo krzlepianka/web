@@ -43,12 +43,14 @@
     }    
 
     &__picture {
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
         height: 33rem;
         -webki-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &--1 {
-            background-image: url('../images/smoking-img-3.png');
+            background-image: url('../images/smoking-img-10.jpg');
 
         }
         &--2 {
@@ -78,32 +80,5 @@
         @include respond(big-deskt) {
         transform: rotateY(360deg); 
         }  
-    }
-    &__heading {
-        &-span {
-            &--1 {
-                //background-image: linear-gradient(to right, rgba(179, 74, 70, 0.521), rgba(128, 15, 15, 0.384));
-            }
-        }
-    }
-    
-}
-
-.layer {
-    @include respond(tab-port) {
-    transition: all .8s ease-in-out;
-    visibility: hidden;
-    height: inherit;
-    }
-    @include respond(big-deskt) {
-        display: none;
-    }
-    &__links {
-        height: inherit;
-        display: block;
-        padding: 13rem 0;
-        & a {
-            margin: 2rem;
-        }
-    }
+    }   
 }

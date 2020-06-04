@@ -29,11 +29,12 @@
         }
     }
 */ }
+  @media (max-width: 74.25rem) {
+    .row {
+      max-width: 95rem; } }
   @media (max-width: 56.25rem) {
     .row {
-      margin-bottom: 6rem; } }
-  @media (max-width: 56.25rem) {
-    .row {
+      margin-bottom: 6rem;
       max-width: 40rem; } }
   .row::after {
     content: '';
@@ -154,6 +155,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 74.25rem) {
+      .header .header-content {
+        width: 85%; } }
     @media (max-width: 56.25rem) {
       .header .header-content {
         padding: 10rem 0px;
@@ -204,6 +208,9 @@ body {
   .about-me-technology-item {
     height: 8rem;
     padding: 2rem; }
+  @media (max-width: 74.25rem) {
+    .about-me-description {
+      padding: 0 6rem; } }
 
 .card {
   perspective: 150rem;
@@ -237,12 +244,14 @@ body {
       .card__side--back-3 {
         background-image: linear-gradient(to right, #F00d, #01d); }
   .card__picture {
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     height: 33rem;
     -webki-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: url("../images/smoking-img-3.png"); }
+      background-image: url("../images/smoking-img-10.jpg"); }
     .card__picture--2 {
       background-image: url("../images/icon-note-6.jpg");
       background-color: #F39C12; }
@@ -259,23 +268,6 @@ body {
   @media (min-width: 80rem) {
     .card:hover .card__side--back {
       transform: rotateY(360deg); } }
-
-@media (max-width: 56.25rem) {
-  .layer {
-    transition: all .8s ease-in-out;
-    visibility: hidden;
-    height: inherit; } }
-
-@media (min-width: 80rem) {
-  .layer {
-    display: none; } }
-
-.layer__links {
-  height: inherit;
-  display: block;
-  padding: 13rem 0; }
-  .layer__links a {
-    margin: 2rem; }
 
 .btn__about-me--purple {
   animation: moveUpFirst 2s ease-out;
@@ -414,6 +406,26 @@ body {
 
 .navigation__container-btn.open .navigation__btn:after {
   transform: rotate(-45deg); }
+
+@media (max-width: 56.25rem) {
+  .layer {
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    height: inherit; } }
+
+@media (min-width: 80rem) {
+  .layer {
+    display: none; } }
+
+.layer__links {
+  height: inherit;
+  display: block;
+  padding: 13rem 0; }
+  @media (min-width: 80rem) {
+    .layer__links {
+      display: none; } }
+  .layer__links a {
+    margin: 2rem; }
 
 @keyframes moveRight {
   0% {

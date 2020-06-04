@@ -8,6 +8,9 @@
         }
     }
     &-description {
+        @include respond(tab-land) {
+            padding: 0 6rem;
+        }
     }
 }
 

@@ -1,0 +1,21 @@
+.layer {
+    @include respond(tab-port) {
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    height: inherit;
+    }
+    @include respond(big-deskt) {
+        display: none;
+    }
+    &__links {
+        @include respond(big-deskt) {
+            display: none;
+        }
+        height: inherit;
+        display: block;
+        padding: 13rem 0;
+        & a {
+            margin: 2rem;
+        }
+    }
+}

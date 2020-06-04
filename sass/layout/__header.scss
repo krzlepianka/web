@@ -9,6 +9,9 @@
         height: auto;
     }
     & .header-content {
+        @include respond(tab-land) {
+            width: 85%;
+        }
         width: 65%;
         position: absolute;
         top: 50%;
