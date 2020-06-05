@@ -1,51 +1,25 @@
-//ViewPort detection
-window.addEventListener('DOMContentLoaded', (event) => {
-    /*function scrollDetection() {
-        let aboutMeSection = document.querySelector('.about-me');
-        let projectsSection = document.querySelector('.projects')
-        let footerSection = document.querySelector('footer');
-        $(window).on('scroll', function(e) {
-            let OffsetY = this.pageYOffset + 400;
-            if(OffsetY >= aboutMeSection.offsetTop && OffsetY <= (aboutMeSection.offsetTop + aboutMeSection.offsetHeight)) {
-                $('.about-me').stop().animate({
+$(document).ready(function() {
+    function scrollDetection(section) {
+        const currentSection = document.querySelector(section);
+        $(window).on('scroll', function() {
+            let offsetY = this.pageYOffset + 400;
+            if(offsetY >= currentSection.offsetTop && offsetY <= (currentSection.offsetTop + currentSection.offsetHeight)) {
+                $(section).stop().animate({
                     marginLeft: "0px",
                     opacity: "1"
                 }, "fast")
                 }
             else {
-                $('.about-me').stop().animate({
+                $(section).stop().animate({
                     marginLeft: "-300px",
                     opacity: "0"
                 }, "fast")
             }
-            if(OffsetY >= projectsSection.offsetTop && OffsetY <= (projectsSection.offsetTop + projectsSection.offsetHeight)) {
-                $('.projects').stop().animate({
-                    marginLeft: "0px",
-                    opacity: "1"
-                }, "fast")
-                }
-            else {
-                $('.projects').stop().animate({
-                    marginLeft: "-300px",
-                    opacity: "0"
-                }, "fast")
-            }
-            if(OffsetY >= footerSection.offsetTop && OffsetY <= (footerSection.offsetTop + footerSection.offsetHeight)) {
-                $('.footer').stop().animate({
-                    marginLeft: "0px",
-                    opacity: "1"
-                }, "fast")
-                }
-            else {
-                $('.footer').stop().animate({
-                    marginLeft: "-300px",
-                    opacity: "0"
-                }, "fast")
-            }
-        })
-    }
-    scrollDetection();*/
-
+    })
+}
+    scrollDetection('.about-me');
+    scrollDetection('.projects');
+    
 function checkInitialWidth() {
     let navigationForLargeScreens = document.querySelector('.navigation');
     let navigationForSmallScreens = document.querySelector('.navigation__mobile');
@@ -81,7 +55,6 @@ checkResize();
 
 
 function openMobileMenu() {
-    //const menu = document.querySelector('.navigation__menu');
     const menu = document.querySelector('.navigation__container-btn');
     const links = document.querySelector('.navigation__links-mobile');
     let menuOpen = false;
@@ -101,7 +74,16 @@ function openMobileMenu() {
 
 openMobileMenu();
 
+function ScrollTopElement() {
+    $('a[href^="#"]').on('click', function() {
+        const section = $(this.getAttribute('href'));
+        $('html, body').animate({
+            scrollTop: section.offset().top
+        }, 1000)
+    })
+}
 
+ScrollTopElement();
 
 });
 

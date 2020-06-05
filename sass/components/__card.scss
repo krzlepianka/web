@@ -28,19 +28,22 @@
     }
     &--back {
         transform: rotateY(180deg);
-        &-1 {
-            background-image: linear-gradient(to right, #F00d, #01d);
-            }
+        &--1 {
+            background-image: url('../images/smoking-img-10.jpg');
 
-        &-2 {
-            background-image: linear-gradient(to right, #F00d, #01d);
-            }
-
-        &-3 {
-            background-image: linear-gradient(to right, #F00d, #01d);
-            }
         }
-    }    
+        &--2 {
+            background-image: url('../images/icon-note-6.jpg');
+            background-color: #F39C12;
+
+        }
+        &--3 {
+            background-image: url('../images/smog-icon-3.png');
+            background-color: #48B02C;
+
+        }
+        }
+}    
 
     &__picture {
         background-repeat: no-repeat;
@@ -71,6 +74,10 @@
         }         
     }
     &:hover .layer {
+        @include respond(tab-land) {
+            visibility: visible;
+            background: rgba(0,0,0,0.5);
+        }
         @include respond(tab-port) {
             visibility: visible;
             background: rgba(0,0,0,0.5);

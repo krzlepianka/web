@@ -29,7 +29,7 @@
         }
     }
 */ }
-  @media (max-width: 74.25rem) {
+  @media (max-width: 79.99rem) {
     .row {
       max-width: 95rem; } }
   @media (max-width: 56.25rem) {
@@ -73,7 +73,7 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 74.25rem) {
+  @media (max-width: 79.99rem) {
     html {
       font-size: 60%; } }
   @media (max-width: 56.25rem) {
@@ -155,7 +155,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-    @media (max-width: 74.25rem) {
+    @media (max-width: 79.99rem) {
       .header .header-content {
         width: 85%; } }
     @media (max-width: 56.25rem) {
@@ -208,7 +208,7 @@ body {
   .about-me-technology-item {
     height: 8rem;
     padding: 2rem; }
-  @media (max-width: 74.25rem) {
+  @media (max-width: 79.99rem) {
     .about-me-description {
       padding: 0 6rem; } }
 
@@ -237,12 +237,14 @@ body {
       color: #48AC2D; }
     .card__side--back {
       transform: rotateY(180deg); }
-      .card__side--back-1 {
-        background-image: linear-gradient(to right, #F00d, #01d); }
-      .card__side--back-2 {
-        background-image: linear-gradient(to right, #F00d, #01d); }
-      .card__side--back-3 {
-        background-image: linear-gradient(to right, #F00d, #01d); }
+      .card__side--back--1 {
+        background-image: url("../images/smoking-img-10.jpg"); }
+      .card__side--back--2 {
+        background-image: url("../images/icon-note-6.jpg");
+        background-color: #F39C12; }
+      .card__side--back--3 {
+        background-image: url("../images/smog-icon-3.png");
+        background-color: #48B02C; }
   .card__picture {
     background-repeat: no-repeat;
     background-size: contain;
@@ -261,6 +263,10 @@ body {
   @media (min-width: 80rem) {
     .card:hover .card__side--front {
       transform: rotateY(180deg); } }
+  @media (max-width: 79.99rem) {
+    .card:hover .layer {
+      visibility: visible;
+      background: rgba(0, 0, 0, 0.5); } }
   @media (max-width: 56.25rem) {
     .card:hover .layer {
       visibility: visible;
@@ -407,6 +413,12 @@ body {
 .navigation__container-btn.open .navigation__btn:after {
   transform: rotate(-45deg); }
 
+@media (max-width: 79.99rem) {
+  .layer {
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    height: inherit; } }
+
 @media (max-width: 56.25rem) {
   .layer {
     transition: all .5s ease-in-out;
@@ -425,7 +437,10 @@ body {
     .layer__links {
       display: none; } }
   .layer__links a {
-    margin: 2rem; }
+    margin: 2rem;
+    font-size: 2rem;
+    color: #FFF;
+    text-decoration: none; }
 
 @keyframes moveRight {
   0% {
