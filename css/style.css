@@ -202,6 +202,9 @@ body {
         animation-fill-mode: backwards;
         color: #F2E205; }
 
+.projects {
+  color: #2955D9; }
+
 .about-me {
   background-color: #FFF;
   color: #2955D9; }
@@ -220,31 +223,29 @@ body {
   cursor: pointer; }
   .card__side {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 50rem;
     transition: all .8s ease;
-    width: 100%;
+    width: 65%;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0rem 1.5rem 4rem rgba(0, 0, 0, 0.15);
     overflow: hidden; }
+    @media (max-width: 79.99rem) {
+      .card__side {
+        width: 100%; } }
     .card__side--front-1 {
       color: #DE525E; }
     .card__side--front-2 {
-      color: #F1C40F; }
-    .card__side--front-3 {
-      color: #48AC2D; }
+      color: #ffbf00; }
     .card__side--back {
-      transform: rotateY(180deg); }
-      .card__side--back--1 {
-        background-image: url("../images/smoking-img-10.jpg"); }
-      .card__side--back--2 {
-        background-image: url("../images/icon-note-6.jpg");
-        background-color: #F39C12; }
-      .card__side--back--3 {
-        background-image: url("../images/smog-icon-3.png");
-        background-color: #48B02C; }
+      transform: translate(-50%, -50%) rotateY(180deg); }
+      .card__side--back-1 {
+        background: #F2433D; }
+      .card__side--back-2 {
+        background: #ffbf00; }
   .card__picture {
     background-repeat: no-repeat;
     background-size: contain;
@@ -255,14 +256,25 @@ body {
     .card__picture--1 {
       background-image: url("../images/smoking-img-10.jpg"); }
     .card__picture--2 {
-      background-image: url("../images/icon-note-6.jpg");
-      background-color: #F39C12; }
-    .card__picture--3 {
-      background-image: url("../images/smog-icon-3.png");
-      background-color: #48B02C; }
+      background-image: url("../images/hd.png");
+      background-color: #ffbf00; }
+  .card-back {
+    height: 100%;
+    position: relative; }
+    .card-back__links {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .card-back__link {
+      padding: 0 2rem;
+      font-size: 2rem;
+      color: #FFF;
+      text-decoration: none; }
   @media (min-width: 80rem) {
     .card:hover .card__side--front {
-      transform: rotateY(180deg); } }
+      transform: translate(-50%, -50%) rotateY(180deg); } }
   @media (max-width: 79.99rem) {
     .card:hover .layer {
       visibility: visible;
@@ -273,7 +285,7 @@ body {
       background: rgba(0, 0, 0, 0.5); } }
   @media (min-width: 80rem) {
     .card:hover .card__side--back {
-      transform: rotateY(360deg); } }
+      transform: translate(-50%, -50%) rotateY(360deg); } }
 
 .btn__about-me--purple {
   animation: moveUpFirst 2s ease-out;

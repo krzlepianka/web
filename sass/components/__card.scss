@@ -5,12 +5,16 @@
     height: 50rem;
     cursor: pointer;
     &__side {
+        @include respond(tab-land) {
+            width: 100%;
+        }
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         height: 50rem;
         transition: all .8s ease;
-        width: 100%;
+        width: 65%;
         backface-visibility: hidden;
         border-radius: 3px;
         box-shadow: 0rem 1.5rem 4rem rgba($color-black, .15);
@@ -20,29 +24,18 @@
             color: $light-red;
         }
         &-2 {
-            color: $light-yellow;
-        }
-        &-3 {
-            color: $light-green;
+            color: $light-yellow
         }
     }
     &--back {
-        transform: rotateY(180deg);
-        &--1 {
-            background-image: url('../images/smoking-img-10.jpg');
-
+        transform: translate(-50%, -50%) rotateY(180deg);
+        &-1 {
+            background: $color-orange;
         }
-        &--2 {
-            background-image: url('../images/icon-note-6.jpg');
-            background-color: #F39C12;
-
+        &-2 {
+            background: $light-yellow;
         }
-        &--3 {
-            background-image: url('../images/smog-icon-3.png');
-            background-color: #48B02C;
-
-        }
-        }
+    }
 }    
 
     &__picture {
@@ -57,20 +50,33 @@
 
         }
         &--2 {
-            background-image: url('../images/icon-note-6.jpg');
-            background-color: #F39C12;
+            background-image: url('../images/hd.png');
+            background-color: $light-yellow;
 
         }
-        &--3 {
-            background-image: url('../images/smog-icon-3.png');
-            background-color: #48B02C;
+    }
 
+    &-back {
+        height: 100%;
+        position: relative;
+        &__links {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &__link {
+            padding: 0 2rem;
+            font-size: 2rem;    
+            color: $white;
+            text-decoration: none;;
         }
     }
     
     &:hover &__side--front {
         @include respond(big-deskt) {
-            transform: rotateY(180deg);   
+            transform: translate(-50%, -50%) rotateY(180deg);   
         }         
     }
     &:hover .layer {
@@ -85,7 +91,7 @@
     } 
     &:hover &__side--back {
         @include respond(big-deskt) {
-        transform: rotateY(360deg); 
+        transform: translate(-50%, -50%) rotateY(360deg); 
         }  
     }   
 }
